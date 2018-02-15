@@ -10,6 +10,7 @@ Możesz także dodać pomysł na projekt. Strona ma mieć przejrzysty i czysty w
 
 15.02.2018 - Aktualizacja dostęu
 
+                        - Dodano komentarze Disqus
                         - Stworzono repozytorium strony na GitHub
                         
                         - Udostępniono strone globalnie
