@@ -1,4 +1,4 @@
-# Fruji
+# Frujit
 Ten projekt to strona Frujit. Na stronie dodaję moje projekty.
 Możesz także dodać pomysł na projekt. Strona ma mieć przejrzysty i czysty wygląd.
 
