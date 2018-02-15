@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Changelog</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/now-ui-kit.css?v=1.1.0" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="../assets/css/demo.css" rel="stylesheet" />
+</head>
+
+<body class="landing-page sidebar-collapse">
+<script type="text/javascript">
+        (function() {
+    //copyright JGA 2013 under MIT License
+    var monster={set:function(e,t,n,r){var i=new Date,s="",o=typeof t,u="";r=r||"/",n&&(i.setTime(i.getTime()+n*24*60*60*1e3),s="; expires="+i.toGMTString());if(o==="object"&&o!=="undefined"){if(!("JSON"in window))throw"Bummer, your browser doesn't support JSON parsing.";u=JSON.stringify({v:t})}else u=escape(t);document.cookie=e+"="+u+s+"; path="+r},get:function(e){var t=e+"=",n=document.cookie.split(";"),r="",i="",s={};for(var o=0;o<n.length;o++){var u=n[o];while(u.charAt(0)==" ")u=u.substring(1,u.length);if(u.indexOf(t)===0){r=u.substring(t.length,u.length),i=r.substring(0,1);if(i=="{"){s=JSON.parse(r);if("v"in s)return s.v}return r=="undefined"?undefined:unescape(r)}}return null},remove:function(e){this.set(e,"",-1)},increment:function(e,t){var n=this.get(e)||0;this.set(e,parseInt(n,10)+1,t)},decrement:function(e,t){var n=this.get(e)||0;this.set(e,parseInt(n,10)-1,t)}};
+
+    if (monster.get('cookieinfo') === 'true') {
+        return false;
+    }
+
+    var container = document.createElement('div'),
+        link = document.createElement('a');
+
+    container.setAttribute('id', 'cookieinfo');
+    container.setAttribute('class', 'cookie-alert');
+    container.innerHTML = '<h6>Ta strona wykorzystuje pliki cookie</h6><p>Używamy informacji zapisanych za pomocą plików cookies w celu zapewnienia maksymalnej wygody w korzystaniu z naszego serwisu. Mogą też korzystać z nich współpracujące z nami firmy badawcze oraz reklamowe. Jeżeli wyrażasz zgodę na zapisywanie informacji zawartej w cookies kliknij na &bdquo;x&rdquo; w prawym górnym rogu tej informacji. Jeśli nie wyrażasz zgody, ustawienia dotyczące plików cookies możesz zmienić w swojej przeglądarce.</p>';
+
+    link.setAttribute('href', '#');
+    link.setAttribute('title', 'Zamknij');
+    link.innerHTML = 'x';
+
+    function clickHandler(e) {
+        if (e.preventDefault) {
+            e.preventDefault();
+        } else {
+            e.returnValue = false;
+        }
+
+        container.setAttribute('style', 'opacity: 1');
+
+        var interval = window.setInterval(function() {
+            container.style.opacity -= 0.01;
+
+            if (container.style.opacity <= 0.02) {
+                document.body.removeChild(container);
+                window.clearInterval(interval);
+                monster.set('cookieinfo', 'true', 365);
+            }
+        }, 4);
+    }
+
+    if (link.addEventListener) {
+        link.addEventListener('click', clickHandler);
+    } else {
+        link.attachEvent('onclick', clickHandler);
+    }
+
+    container.appendChild(link);
+    document.body.appendChild(container);
+
+    return true;
+})();
+    </script>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-info fixed-top navbar-transparent " color-on-scroll="000">
+        <div class="container">
+            <div class="dropdown button-dropdown">
+                <a href="#pablo" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
+                    <span class="button-bar"></span>
+                    <span class="button-bar"></span>
+                    <span class="button-bar"></span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-header">Menu</a>
+                    <a class="dropdown-item" href="../index.html"><i class="now-ui-icons design-2_ruler-pencil"></i>&nbsp;Home</a>
+                    <a class="dropdown-item" href="profile-page.html"><i class="now-ui-icons business_badge"></i>&nbsp;About me</a>
+                    <a class="dropdown-item" href="login.html"><i class="now-ui-icons users_single-02"></i>&nbsp;Lgin/Register</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="https://landbot.io/u/H-24156-4RFMBA1VV4MS005E/index.html"><i class="now-ui-icons emoticons_satisfied"></i>&nbsp;Lumino</a>
+                    <a class="dropdown-item" href="mail/login-page.html"><i class="now-ui-icons ui-1_email-85"></i>&nbsp;Frujit Mail</a>
+                    <a class="dropdown-item" href="examples/changelog.html"><i class="now-ui-icons files_paper"></i>&nbsp;Changelog</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="poland.html">🇵🇱&nbsp;Poland</a>
+                    <a class="dropdown-item" href="#">🇺🇸&nbsp;English</a>
+                </div>
+            </div>
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="index.html" rel="tooltip" title="Frujit - app creator" data-placement="bottom" target="_blank">
+                 Frujit
+                </a>
+                <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </button>
+            </div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="./assets/img/blurred-image-1.jpg">
+                
+             <!-- Add search engine -->
+              <div class="col-sm-6 col-lg-7">
+                        <input name="Textbox" type="text" value="" placeholder="Search..." class="form-control form-control-success" width="10">
+                    </div>
+                    <div class="col-sm-6">
+                        
+                        <button id="SearchButton" class="btn btn-info btn-icon btn-round" type="button" href="#">
+                                        <i class="now-ui-icons ui-1_zoom-bold"></i>
+                        </button>
+                </div>
+
+                <ul class="navbar-nav">
+     
+
+            <li class="nav-item">
+                    <div class="dropdown button-dropdown">
+            <a href="#pablo" class="dropdown-toggle" id="navDropdown" data-toggle="dropdown" rel="tooltip" data-placement="bottom">
+                    <div class="small_space"></div>
+                    <div class="small_space"></div>
+                    <div class="small_space"></div>
+                    <div class="small_space"></div>
+                    <i class="now-ui-icons design_bullet-list-67"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navDropdown">
+                    <a class="dropdown-header">Notification</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"><i class="now-ui-icons design_app"></i>&nbsp; New app - <b>Chamelon</b></a>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"><i class="now-ui-icons design-2_html5"></i>&nbsp;New site - <b>Frujit Studio</b></a>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"><i class="now-ui-icons files_paper"></i>&nbsp;New post - <b>/S Connect</b></a>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"><i class="now-ui-icons design_image"></i>&nbsp;New design - <b>Facebook</b></a>
+                    <div class="dropdown-divider"></div>
+
+                    </div>
+                </div>
+            <li class="nav-item">
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Login" data-placement="bottom" href="login.html" target="_blank">
+                            <i class="now-ui-icons users_single-02"></i>
+                            <p class="d-lg-none d-xl-none">Login</p>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Like me in Facebook" data-placement="bottom" href="https://www.facebook.com/slashconnectt/" target="_blank">
+                            <i class="fa fa-facebook-square"></i>
+                            <p class="d-lg-none d-xl-none">Facebook</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="See SlashConnect" data-placement="bottom" href="https://slashconnectblog.wordpress.com" target="_blank">
+                            <i class="now-ui-icons location_world"></i>
+                            <p class="d-lg-none d-xl-none">Blog</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="wrapper">
+        <div class="page-header page-header-small">
+            <div class="page-header-image" data-parallax="true" style="background-image: url('../assets/img/bg6.jpg');">
+            </div>
+            <div class="container">
+                <div class="content-center">
+                    <h1 class="title">Changelog.</h1>
+                    <div class="text-center">
+                        <a href="#pablo" class="btn btn-info btn-icon btn-round">
+                            <i class="fa fa-facebook-square"></i>
+                        </a>
+                        <a href="#pablo" class="btn btn-info btn-icon btn-round">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#pablo" class="btn btn-info btn-icon btn-round">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="section section-about-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto text-center">
+                        <h2 class="title">29.01.2018 - Aktualizacja dodatkowa</h2>
+                        <h5 class="description">- Dodano karty w sekcji aplikacji</h5>
+                        <h5 class="description">- Nowe logo</h5>
+                        <h5 class="description">- Naprawiono kolory</h5>
+                        <h5 class="description">- Zainteresowanie technologią</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-about-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto text-center">
+                        <h2 class="title">28.01.2018 - Aktualizacja wyglądu</h2>
+                        <h5 class="description">- Zmieniono tło główne</h5>
+                        <h5 class="description">- Naprawiono drobne błędy</h5>
+                        <h5 class="description">- Alevo - moja pierwsza gra</h5>
+                        <h5 class="description">- Poprawiono folmularz wysyłania email</h5>
+                        <h5 class="description">- Naprawiono kolory</h5>
+                        <h5 class="description">- lepszy układ aplikacji</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-about-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto text-center">
+                        <h2 class="title">27.01.2018 - Aktualizacja naprawcza</h2>
+                        <h5 class="description">- Naprawiono kolory</h5>
+                        <h5 class="description">- Naprawiono menu w wersji mobilnej</h5>
+                        <h5 class="description">- Bot Lumino na stronie domowej</h5>
+                        <h5 class="description">- Zaktualizowano Polską wersję </h5>
+                        <h5 class="description">- Naprawiono komunikat cookie w wersji mobilnej</h5>
+                        <h5 class="description">- Pole wyszukiwania po prawej</h5>
+                        <h5 class="description">- Pole wyszukiwania ukrywane w wersji mobilnej w menu</h5>
+                        <h5 class="description">- Frujit Mail, czyli nowa poczta</h5>
+                        <h5 class="description">- Changelog aktualizacji</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer footer-default">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="https://www.creative-tim.com">
+                                Creative Tim
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://presentation.creative-tim.com">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://blog.creative-tim.com">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md">
+                                MIT License
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="copyright">
+                    &copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>, Designed by
+                    <a href="http://www.invisionapp.com" target="_blank">Invision</a>. Coded by
+                    <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<!--   Core JS Files   -->
+<script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="../assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+<!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+<script src="../assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
+<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+<script src="../assets/js/now-ui-kit.js?v=1.1.0" type="text/javascript"></script>
+
+</html>

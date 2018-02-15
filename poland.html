@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Frujit</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assets/css/now-ui-kit.css?v=1.1.0" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="./assets/css/demo.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.css' rel='stylesheet' />
+
+    <div id="umiwebchat-container"></div><script>var LandbotLiveConfig = { index: 'https://landbot.io/u/H-24156-4RFMBA1VV4MS005E/index.html', accent: '#4a90e2' };</script><script src="https://static.helloumi.com/umiwebchat/umiwebchat.js" defer></script>
+
+</head>
+
+<body class="index-page sidebar-collapse">
+    <div class="cursor">
+    <script type="text/javascript">
+        (function() {
+    //copyright JGA 2013 under MIT License
+    var monster={set:function(e,t,n,r){var i=new Date,s="",o=typeof t,u="";r=r||"/",n&&(i.setTime(i.getTime()+n*24*60*60*1e3),s="; expires="+i.toGMTString());if(o==="object"&&o!=="undefined"){if(!("JSON"in window))throw"Bummer, your browser doesn't support JSON parsing.";u=JSON.stringify({v:t})}else u=escape(t);document.cookie=e+"="+u+s+"; path="+r},get:function(e){var t=e+"=",n=document.cookie.split(";"),r="",i="",s={};for(var o=0;o<n.length;o++){var u=n[o];while(u.charAt(0)==" ")u=u.substring(1,u.length);if(u.indexOf(t)===0){r=u.substring(t.length,u.length),i=r.substring(0,1);if(i=="{"){s=JSON.parse(r);if("v"in s)return s.v}return r=="undefined"?undefined:unescape(r)}}return null},remove:function(e){this.set(e,"",-1)},increment:function(e,t){var n=this.get(e)||0;this.set(e,parseInt(n,10)+1,t)},decrement:function(e,t){var n=this.get(e)||0;this.set(e,parseInt(n,10)-1,t)}};
+
+    if (monster.get('cookieinfo') === 'true') {
+        return false;
+    }
+
+    var container = document.createElement('div'),
+        link = document.createElement('a');
+
+    container.setAttribute('id', 'cookieinfo');
+    container.setAttribute('class', 'cookie-alert');
+    container.innerHTML = '<h6>Ta strona wykorzystuje pliki cookie</h6><p>Używamy informacji zapisanych za pomocą plików cookies w celu zapewnienia maksymalnej wygody w korzystaniu z naszego serwisu. Mogą też korzystać z nich współpracujące z nami firmy badawcze oraz reklamowe. Jeżeli wyrażasz zgodę na zapisywanie informacji zawartej w cookies kliknij na &bdquo;x&rdquo; w prawym górnym rogu tej informacji. Jeśli nie wyrażasz zgody, ustawienia dotyczące plików cookies możesz zmienić w swojej przeglądarce.</p>';
+
+    link.setAttribute('href', '#');
+    link.setAttribute('title', 'Zamknij');
+    link.innerHTML = 'x';
+
+    function clickHandler(e) {
+        if (e.preventDefault) {
+            e.preventDefault();
+        } else {
+            e.returnValue = false;
+        }
+
+        container.setAttribute('style', 'opacity: 1');
+
+        var interval = window.setInterval(function() {
+            container.style.opacity -= 0.01;
+
+            if (container.style.opacity <= 0.02) {
+                document.body.removeChild(container);
+                window.clearInterval(interval);
+                monster.set('cookieinfo', 'true', 365);
+            }
+        }, 4);
+    }
+
+    if (link.addEventListener) {
+        link.addEventListener('click', clickHandler);
+    } else {
+        link.attachEvent('onclick', clickHandler);
+    }
+
+    container.appendChild(link);
+    document.body.appendChild(container);
+
+    return true;
+})();
+    </script>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-info fixed-top navbar-transparent " color-on-scroll="000">
+        <div class="container">
+        	<div class="dropdown button-dropdown">
+                <a href="#pablo" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
+                    <span class="button-bar"></span>
+                    <span class="button-bar"></span>
+                    <span class="button-bar"></span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-header">Menu</a>
+                    <a class="dropdown-item" href="index.html"><i class="now-ui-icons design-2_ruler-pencil"></i>&nbsp;Domowa</a>
+                    <a class="dropdown-item" href="/examples/profile-page.html"><i class="now-ui-icons business_badge"></i>&nbsp;O mnie</a>
+                    <a class="dropdown-item" href="login.html"><i class="now-ui-icons users_single-02"></i>&nbsp;Zaloguj/Zarejestruj</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="https://landbot.io/u/H-24156-4RFMBA1VV4MS005E/index.html"><i class="now-ui-icons emoticons_satisfied"></i>&nbsp;Lumino</a>
+                    <a class="dropdown-item"><i class="now-ui-icons ui-1_email-85"></i>&nbsp;Frujit Mail (coming soon)</a>
+                    <a class="dropdown-item" href="examples/changelog.html"><i class="now-ui-icons files_paper"></i>&nbsp;Changelog</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">🇵🇱&nbsp;Polska</a>
+                    <a class="dropdown-item" href="index.html">🇺🇸&nbsp;Angielski</a>
+                </div>
+            </div>
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="index.html" rel="tooltip" title="Frujit - app creator" data-placement="bottom" target="_blank">
+                 Frujit
+                </a>
+                <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </button>
+            </div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+            <div class="space-width"></div>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="./assets/img/blurred-image-1.jpg">
+                
+             <!-- Add search engine -->
+              <div class="col-sm-6 col-lg-7">
+                        <input name="Textbox" type="text" value="" placeholder="Szukaj..." class="form-control form-control-success" width="10">
+                    </div>
+                    <div class="col-sm-6">
+                        
+                        <button id="SearchButton" class="btn btn-info btn-icon btn-round" type="button" href="#">
+                                        <i class="now-ui-icons ui-1_zoom-bold"></i>
+                        </button>
+                </div>
+
+                <ul class="navbar-nav">
+     
+
+            <li class="nav-item">
+                    <div class="dropdown button-dropdown">
+            <a href="#pablo" class="dropdown-toggle" id="navDropdown" data-toggle="dropdown" rel="tooltip" data-placement="bottom">
+                    <div class="small_space"></div>
+                    <div class="small_space"></div>
+                    <div class="small_space"></div>
+                    <div class="small_space"></div>
+                    <i class="now-ui-icons design_bullet-list-67"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navDropdown">
+                    <a class="dropdown-header">Powiadomienia</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"><i class="now-ui-icons design_app"></i>&nbsp; Nowa aplikacja - <b>Chamelon</b></a>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"><i class="now-ui-icons design-2_html5"></i>&nbsp;Nowa stron - <b>Frujit Studio</b></a>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"><i class="now-ui-icons files_paper"></i>&nbsp;Nowy post - <b>/S Connect</b></a>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"><i class="now-ui-icons design_image"></i>&nbsp;Now wygląd - <b>Facebook</b></a>
+                    <div class="dropdown-divider"></div>
+
+                    </div>
+                </div>
+            <li class="nav-item">
+
+
+					<li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Login" data-placement="bottom" href="login.html" target="_blank">
+                            <i class="now-ui-icons users_single-02"></i>
+                            <p class="d-lg-none d-xl-none">Zaloguj</p>
+                        </a>
+                    </li>
+
+
+					<li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Like me in Facebook" data-placement="bottom" href="https://www.facebook.com/slashconnectt/" target="_blank">
+                            <i class="fa fa-facebook-square"></i>
+                            <p class="d-lg-none d-xl-none">Facebook</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="See SlashConnect" data-placement="bottom" href="https://slashconnectblog.wordpress.com" target="_blank">
+                            <i class="now-ui-icons location_world"></i>
+                            <p class="d-lg-none d-xl-none">Blog</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="wrapper">
+        <div class="page-header clear-filter" filter-color="blue">
+            <div class="page-header-image" data-parallax="true" style="background-image: url('./assets/img/iu-4.jpeg');">
+            </div>
+            <div class="container">
+                <div class="content-center brand">
+                    <img class="n-logo" src="./assets/img/logo_makr.png" alt="">
+                    <h1 class="h1-seo">Frujit.</h1>
+                    <h3>Piękne aplikacje dla wszystkich.</h3>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="section section-basic">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-lg-8 col-xl-6 ml-auto mr-auto">    
+                        <div class="space"></div>     
+
+        					<p class="category">O Frujit...</p>
+                            <!-- Tabs with Background on Card -->
+                            <div class="card">
+                                <ul class="nav nav-tabs navbar-expand-lg bg-info" role="tablist" data-background-color="orange">
+                                    <li class="nav-item">
+                                        <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#home1" role="tab"> <i class="now-ui-icons business_bulb-63"></i> Co to Frujit?</a>
+                                        </li>
+                                    </li>
+                                </ul>
+                                <div class="card-body">
+                                    <!-- Tab panes -->
+                                    <div class="tab-content text-center">
+                                        <div class="tab-pane active" id="home1" role="tabpanel">
+                                            <p>Frujit tworzy aplikacje dla wszystkich platform Apple - MacOS, tvOS, WatchOS i iOS. Robi to ze stylem i pięknem. Wszystkie aplikacje są funkcjonalne i użyteczne. Aplikacje są dostępne dla wszystkich bez żadnych wyjątków za darmo. Frujit tworzy przeglądarki internetowe, menedżery plików, programy graficzne, IDE i inne. Chcesz? Masz!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        <h4>Aplikacje stworzone przez Frujit</h4>
+                        <div id="appliaction">
+
+                        <div class="chamelon">
+                            <iframe src="card_chamelon.html" width="100%" height="500" frameborder="0"></iframe>
+                        <!--
+                                <center><img src="assets/img/IconChamelon.png" alt="Circle Image" class="rounded-circle img-fluid img-raised"></center>
+                                <a class="nav-link text-info" rel="tooltip" data-placement="bottom" href="examples/Chamelon_landing-page.html" target="_blank">
+                            <h6 align="center">Chamelon</h6>
+                            </a>
+                        -->
+                        </div>
+                        <div class="alevo">
+                            <iframe src="card_alevo.html" width="100%" height="500" frameborder="0"></iframe>
+
+                        <!--
+                                <center><img src="assets/img/Alevo.png" alt="Circle Image" class="rounded-circle img-fluid img-raised"></center>
+                                <a class="nav-link text-info" rel="tooltip" data-placement="bottom" href="examples/alevo.html" target="_blank">
+                            <h6 align="center">Alevo</h6>
+                            </a>
+                        -->
+                        </div>
+
+                        </div>
+                            <h4>Twórcy aplikacji apps</h4>
+                            <h4> </h4>
+                            <iframe src="table.html" width="100%" height="600" frameborder="0"></iframe>
+                            </div>
+
+                            <div>
+                            <h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEvents</h4>
+                            <h4> </h4>
+                            <iframe src="calendar/index.html" width="100%" height="800" frameborder="0"></iframe>
+                            </div>
+                            <div>
+                            <h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspZainteresowanie technologią</h4>
+                            <h4> </h4>
+                            <iframe width="100%" height="600" src="https://hoodmaps.com/embed/wroclaw" frameborder="0" allowfullscreen></iframe>
+                            </div>
+
+                            <div><h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMapa</h4></div>
+
+                            <div id='map' style='width: 100%; height: 500px;'></div>
+                            <script>
+                            mapboxgl.accessToken = 'pk.eyJ1IjoibWFwaXVtZXJ4IiwiYSI6ImNqNHZyZnM5azBzZWczM3AyaTc3aDl5dXIifQ.ViavRAVg_cSLVMDZqoCU3A';
+                            var map = new mapboxgl.Map({
+                            container: 'map',
+                            style: 'mapbox://styles/mapbox/dark-v9',
+                            center: [22.385, 50.831],
+                            zoom: 4
+                            });
+                            map.addControl(new mapboxgl.NavigationControl());
+                            </script>
+
+                            <div>
+                                <h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSend e-mail</h4>
+
+
+                    <div class="col-md-10 col-lg-8 col-xl-6 ml-auto mr-auto">
+                        <div class="card">
+                                <nav class="navbar navbar-expand-lg bg-info">
+                                <div class="container">
+                                    <a class="navbar-brand" data-toggle="tab" href="#home1" role="tab" aria-expanded="false"><b>Wyślij e-mail (coming soon)</b></a>
+                                </div>
+                            </nav>
+                                <div class="card-body">
+                                    <!-- Tab panes -->
+                                    <div class="tab-content text-center">
+                                        <div class="tab-pane active" id="send1" role="tabpanel">
+
+                                        <h5>Wybierz ważność.</h5>
+
+                        <div class="col-md-10 col-lg-8 col-xl-6 ml-auto mr-auto">
+                            <ul class="nav nav-pills nav-pills-info" role="tablist">
+                                <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#active" role="tablist" aria-expanded="false">
+                                            <i class="fa fa-diamond"></i>
+                                        </a>
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#link" role="tablist" aria-expanded="true">
+                                            <i class="fa fa-thermometer-full"></i>
+                                        </a>
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#link" role="tablist" aria-expanded="false">
+                                            <i class="fa fa-suitcase"></i>
+                                        </a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                            <div class="space"></div>
+                            Temat: 
+                            <input type="text" class="form-control" placeholder="Give subject"></i>
+
+                            <div class="space"></div>
+                            zawartość: 
+                            <input type="text" class="form-control" placeholder="Write contents of e-mail"></i>
+
+                            <div class="space"></div>
+                            Twoje imie:
+                            <input type="text" class="form-control" placeholder="Give your name"></i>
+
+                            <div class="space"></div>
+                            Twój e-mail:
+                            <input type="text" class="form-control" placeholder="Give your e-mail"></i>
+
+                            <div class="space"></div>
+                            <div>
+                                <button class="btn btn-info btn-round" type="button">
+                                    <i class="now-ui-icons ui-1_send"></i> Wyślij
+                                </button>
+                            </div>
+                            
+
+                            <div class="space"></div>
+                            
+                            <div class="alert alert-success" role="alert">
+                    <div class="container">
+                        <div class="alert-icon">
+                            <i class="now-ui-icons ui-2_like"></i>
+                        </div>
+                        <strong>Gratulacje!</strong> Twój email został wysłany.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">
+                                <i class="now-ui-icons ui-1_simple-remove"></i>
+                            </span>
+                        </button>
+                    </div>
+
+                </div>
+
+
+                    <div class="space"></div>
+                    <div class="progress-container progress-info">
+                                <span class="progress-badge">Do wysłania...</span>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                        <span class="progress-value">60%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+            </div>
+
+
+            <div class="section">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-100">
+                            <h2 class="title">Kody Front-End</h2>
+                            <div class="row justify-content-center">
+                        <div class="col-8">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
+                                </ol>
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item">
+                                        <img class="d-block" src="assets/img/HeaderImage.png" alt="First slide">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Kod HTML</h5>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item active">
+                                        <img class="d-block" src="assets/img/codejs.png" alt="Second slide">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Kod JS</h5>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block" src="assets/img/codecss.png" alt="Third slide">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Kod CSS</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <i class="now-ui-icons arrows-1_minimal-left"></i>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <i class="now-ui-icons arrows-1_minimal-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                            <h2 class="title">Kochasz moje aplikacje?</h2>
+                            <h5 class="description">Jeśli tak, powinieneś dołączyć do Frujit Member. Co otrzymasz? Otrzymasz wczesny dostęp do moich aplikacji, otrzymasz konto z adresem e-mail z własną domeną, chmurą internetową, narzędziami analitycznymi oraz programem do tworzenia stron internetowych i aplikacji. Czy zdecydowałeś? Dołącz teraz do Frujit Member.</h5>
+
+<!-- <div id="rt-ecd9e0b4b16d2f53eef5ab98dc8fa3ea"></div><script src="https://www.rumbletalk.com/client/?NEjv-Buo&1"></script>--> <!--RumbleTalk-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>	
+
+            <div class="section section-contact-us text-center">
+            <div class="container">
+                <h2 class="title">Masz pomysł?</h2>
+                <p class="description">Twój projekt jest dla mnie bardzo ważny.</p>
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+                        <div class="input-group input-lg">
+                            <span class="input-group-addon">
+                                <i class="now-ui-icons users_circle-08"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Imię...">
+                        </div>
+                        <div class="input-group input-lg">
+                            <span class="input-group-addon">
+                                <i class="now-ui-icons ui-1_email-85"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Email...">
+                        </div>
+                        <div class="textarea-container">
+                            <textarea class="form-control" name="name" rows="4" cols="80" placeholder="Opisz pomysł..."></textarea>
+                        </div>
+                        <div class="send-button">
+                            <a href="#pablo" class="btn btn-info btn-round btn-block btn-lg">Wyślij wiadomość</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            								<!--bg11.jpg-->
+            <div class="section section-signup" style="background-image: url('assets/img/bg11.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
+                <div class="container">
+                    <div class="row">
+                    </div>
+
+                    <div class="col text-center">
+                                <div class="space"></div>
+                                        <div class="space"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-download" id="#download-section" data-background-color="black">
+                <div class="container">
+        
+                    <div class="row justify-content-md-center sharing-area text-center">
+                        <div class="text-center col-md-12 col-lg-8">
+                            <h3>Dziękuję za zainteresowanie aplikacjami.</h3>
+                        </div>
+                        <div class="text-center col-md-12 col-lg-8">
+     
+                            <a target="_blank" href="https://www.facebook.com/slashconnectt" class="btn btn-neutral btn-icon btn-facebook btn-round btn-lg" rel="tooltip" title="Like me">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sart Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            <i class="now-ui-icons ui-1_simple-remove"></i>
+                        </button>
+                        <h4 class="title title-up">Warunki Frujit Member</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non, consectetuer lobortis quis, varius in, purus. Integer ultrices posuere cubilia Curae, Nulla ipsum dolor lacus, suscipit adipiscing.</p>
+                    </div>
+                    <div class="modal-footer">
+                    	<button class="btn btn-success" data-dismiss="modal">Accept</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  End Modal -->
+        <!-- Mini Modal -->
+        <div class="modal fade modal-mini modal-primary" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center">
+                        <div class="modal-profile">
+                            <i class="now-ui-icons users_circle-08"></i>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <p>Welcome back, Wiktor</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-link btn-neutral">Back</button>
+                        <button type="button" class="btn btn-link btn-neutral" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  End Modal -->
+        <footer class="footer" data-background-color="black">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li>
+                            
+                                 	<a class="nav-link" href="index.html"> <i class="now-ui-icons loader_refresh spin"></i></a>
+                            <a href="https://slashconnectblog.wordpress.com"> <i class="now-ui-icons location_world"></i> &nbsp &nbsp /S Connect </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="copyright">
+                    &copy;
+					<script>
+                        document.write(new Date().getFullYear())
+                    </script> Bazuje na 
+                    <a href="../index.html" target="_blank">Now UI Kit</a>. 
+                    <br />
+                    Logo stworzone na <a href="http://logomakr.com" title="Logo Makr">LogoMakr.com</a>.
+                    <br />
+                    Obrazek nagłówkowy stworzony przez <a href="https://www.mockupworld.co/free/iphone-8-with-homepod-mockup/" title="Mockupworld">Mockupworld</a>. 
+
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+</body>
+<!--   Core JS Files   -->
+<script src="./assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="./assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+<!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+<script src="./assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
+<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+<script src="./assets/js/now-ui-kit.js?v=1.1.0" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        // the body of this function is in assets/js/now-ui-kit.js
+        nowuiKit.initSliders();
+    });
+
+    function scrollToDownload() {
+
+        if ($('.section-download').length != 0) {
+            $("html, body").animate({
+                scrollTop: $('.section-download').offset().top
+            }, 1000);
+        }
+    }
+
+
+   
+</script>
+
+</html>

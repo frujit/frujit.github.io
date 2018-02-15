@@ -1,0 +1,65 @@
+<link href="asse/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="asse/css/hipster_cards.css" rel="stylesheet"/> 
+        
+    <!--     Fonts and icons     -->
+    <link href="asse/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />  
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display|Raleway:700,100,400|Roboto:400,700|Playfair+Display+SC:400,700' rel='stylesheet' type='text/css'>
+    
+    <style>
+        .card{
+            margin-bottom: 70px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card-box col-md-4 col-sm-6">               
+                <div class="card card-with-border" data-background="color" data-color="black">
+                    <div class="header">
+                        <div class="icon">
+                            <i class="pe-7s-video"></i>
+                        </div>
+                    </div>
+                    <div class="content text-center">
+                        <h4 class="title title-modern">Alevo</h4>
+                        <p class="description">First game in Roblox by Frujit.</p>
+                    </div>                      
+                    <div class="footer text-center">
+                        <a class="btn btn-black btn-round btn-fill btn-modern"  href="examples/alevo.html" target="_blank">Learn more</a>
+                        
+                    </div>    
+    </div>
+
+
+</body>
+
+    <script src="asse/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="asse/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="asse/js/hipster-cards.js"></script>
+    
+    <!--  Just for demo  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
+    
+    <script>
+        
+        $().ready(function(){
+            
+            var $container = $('.masonry-container');
+
+            doc_width = $(document).width();
+            
+            if (doc_width >= 768){
+                $container.masonry({
+                    itemSelector        : '.card-box',
+                    columnWidth         : '.card-box',
+                    transitionDuration  : 0
+                });   
+            } else {
+                $('.mas-container').removeClass('mas-container').addClass('row');
+            }            
+        });
+    </script>
+    
+</html>
